@@ -1,55 +1,532 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Scratch Projects</title>
     <style>
-        /* Add your own CSS styles here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .description {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .project-card h2 {
+            margin-top: 0;
+            color: #ff6600;
+            font-size: 1.2rem;
+        }
+        .project-card p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        .project-link {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        .project-link:hover {
+            background-color: #e65c00;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-page h1 {
+            color: #ff6600;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>My Scratch Projects</h1>
-    <h2>Project Gallery</h2>
-    <div id="projects">
-        <a href="https://scratch.mit.edu/projects/1362637251" target="_blank">
-            <h3>Interesting Problem</h3>
-            <p>Try out my "Interesting Problem" project!</p>
-            <button onclick="window.open(this.href, '_blank')">Run Project</button>
-        </a>
-        <a href="https://scratch.mit.edu/projects/1352434149" target="_blank">
-            <h3>Vowel Counter</h3>
-            <p>Test out my vowel vounter!</p>
-            <button onclick="window.open(this.href, '_blank')">Run Project</button>
-        </a>
-        <a href="https://scratch.mit.edu/projects/1352443142" target="_blank">
-            <h3>Simple Data Analysis</h3>
-            <p>Analyse some data with my "Simple Data Analysis" project!</p>
-            <button onclick="window.open(this.href, '_blank')">Run Project</button>
-        </a>
-        <a href="https://scratch.mit.edu/projects/1352418233" target="_blank">
-            <h3>Two Number Calculator</h3>
-            <p>Try out the two cumber calculator I made!</p>
-            <button onclick="window.open(this.href, '_blank')">Run Project</button>
-        </a>
-        <a href="https://scratch.mit.edu/projects/1352415041" target="_blank">
-            <h3>Fahrenheit to Celsius Converter</h3>
-            <p>Convert temperatures with my "Fahrenheit to Celsius" project!</p>
-            <button onclick="window.open(this.href, '_blank')">Run Project</button>
-        </a>
-    </div>
+    <header>
+        <h1>My Scratch Projects</h1>
+    </header>
+    
+    <div class="container">
+        <div class="description">
+            <h2>Welcome to My Scratch Projects</h2>
+            <p>This website showcases a collection of my Scratch projects. Each project demonstrates different programming concepts and creative ideas. Click on any project below to view it in action and test it out!</p>
+        </div>
 
-    <div id="chat-container">
-        <h2>Test them out here!</h2>
-        <iframe src="https://scratch.mit.edu/projects/1362637251/chat" allowtransparency="true" width="300" height="300" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        <iframe src="https://scratch.mit.edu/projects/1352434149/chat" allowtransparency="true" width="300" height="300" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        <iframe src="https://scratch.mit.edu/projects/1352443142/chat" allowtransparency="true" width="300" height="300" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        <iframe src="https://scratch.mit.edu/projects/1352418233/chat" allowtransparency="true" width="300" height="300" frameborder="0" scrolling="no" allowfullscreen></iframe>
-        <iframe src="https://scratch.mit.edu/projects/1352415041/chat" allowtransparency="true" width="300" height="300" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2>Interesting Problem</h2>
+                <p>A creative solution to a unique problem. Explore the logic and see how it works!</p>
+                <a href="interesting-problem.html" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h2>Vowel Counter</h2>
+                <p>A simple tool that counts the vowels in a given text. Useful for learning about strings and loops.</p>
+                <a href="vowel-counter.html" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h2>Simple Data Analysis</h2>
+                <p>A project that performs basic data analysis. Great for understanding data manipulation in Scratch.</p>
+                <a href="simple-data-analysis.html" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h2>Two Number Calculator</h2>
+                <p>A calculator that performs operations on two numbers. Learn about user input and arithmetic operations.</p>
+                <a href="two-number-calculator.html" class="project-link">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h2>Fahrenheit to Celsius</h2>
+                <p>A converter that changes Fahrenheit temperatures to Celsius. A practical example of temperature conversion.</p>
+                <a href="fahrenheit-to-celsius.html" class="project-link">View Project</a>
+            </div>
+        </div>
     </div>
+    
+    <footer>
+        <p>Created with love for Scratch and programming!</p>
+    </footer>
+</body>
+</html>
 
-    <h2>How it works:</h2>
-    <p>Click on a project above to see a preview and get a link to its page. Click on the link to go to the project on Scratch.</p>
-    <script>
-        // Add JavaScript code here4
-    </script>
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting Problem - Scratch Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interesting Problem</h1>
+    </header>
+    
+    <div class="project-page">
+        <p>This project solves a unique problem in a creative way. Interact with it below to see how it works!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1362637251/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="index.html" class="back-link">← Back to all projects</a>
+        <a href="https://scratch.mit.edu/projects/1362637251" class="chat-link">View on Scratch →</a>
+    </div>
+</body>
+</html>
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter - Scratch Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vowel Counter</h1>
+    </header>
+    
+    <div class="project-page">
+        <p>This project counts the vowels in a given text. Type something in and see how many vowels are in your text!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352434149/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="index.html" class="back-link">← Back to all projects</a>
+        <a href="https://scratch.mit.edu/projects/1352434149" class="chat-link">View on Scratch →</a>
+    </div>
+</body>
+</html>
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Data Analysis - Scratch Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Data Analysis</h1>
+    </header>
+    
+    <div class="project-page">
+        <p>This project performs basic data analysis. Interact with it to see how data can be manipulated in Scratch!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352443142/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="index.html" class="back-link">← Back to all projects</a>
+        <a href="https://scratch.mit.edu/projects/1352443142" class="chat-link">View on Scratch →</a>
+    </div>
+</body>
+</html>
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Number Calculator - Scratch Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Two Number Calculator</h1>
+    </header>
+    
+    <div class="project-page">
+        <p>This calculator performs operations on two numbers. Try it out by entering two numbers and selecting an operation!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352418233/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="index.html" class="back-link">← Back to all projects</a>
+        <a href="https://scratch.mit.edu/projects/1352418233" class="chat-link">View on Scratch →</a>
+    </div>
+</body>
+</html>
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit to Celsius - Scratch Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fahrenheit to Celsius</h1>
+    </header>
+    
+    <div class="project-page">
+        <p>This project converts Fahrenheit temperatures to Celsius. Enter a temperature in Fahrenheit and see its equivalent in Celsius!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352415041/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="index.html" class="back-link">← Back to all projects</a>
+        <a href="https://scratch.mit.edu/projects/1352415041" class="chat-link">View on Scratch →</a>
+    </div>
 </body>
 </html>
