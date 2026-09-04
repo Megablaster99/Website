@@ -30,6 +30,7 @@
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         header {
             background-color: var(--accent-color);
@@ -56,6 +57,13 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px var(--shadow);
             margin-bottom: 2rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .description h2 {
+            text-align: center;
+        }
+        .description p {
+            text-align: center;
         }
         .projects-grid {
             display: grid;
@@ -67,7 +75,7 @@
             border-radius: 8px;
             padding: 1rem;
             box-shadow: 0 2px 5px var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
         }
         .project-card:hover {
             transform: translateY(-5px);
@@ -77,10 +85,12 @@
             margin-top: 0;
             color: var(--accent-color);
             font-size: 1.2rem;
+            text-align: center;
         }
         .project-card p {
             margin-bottom: 1rem;
             color: var(--text-secondary);
+            text-align: center;
         }
         .project-link {
             display: inline-block;
@@ -102,9 +112,14 @@
             background-color: var(--card-bg);
             border-radius: 8px;
             box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .project-page h1 {
             color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
         }
         .embed-container {
             margin: 1rem 0;
@@ -131,6 +146,7 @@
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
+            text-align: center;
         }
         .chat-link:hover {
             text-decoration: underline;
@@ -143,6 +159,10 @@
             cursor: pointer;
             padding: 0.2rem;
         }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
     </style>
 </head>
 <body>
@@ -150,6 +170,8 @@
         <h1>Coming Soon</h1>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
     </header>
+    
+    <a href="https://megablaster.cc/" class="chat-link">Back to homepage</a>
     
     <script>
         function toggleTheme() {
@@ -212,100 +234,8 @@
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
-        }
-        header {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
             text-align: center;
-            box-shadow: 0 2px 5px var(--shadow);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .description {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px var(--shadow);
-            margin-bottom: 2rem;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px var(--shadow);
-        }
-        .project-card h2 {
-            margin-top: 0;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-        .project-card p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-        .project-link {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 0.5rem;
-        }
-        .project-link:hover {
-            background-color: var(--accent-hover);
-        }
-        .project-page {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 5px var(--shadow);
-        }
-        .project-page h1 {
-            color: var(--accent-color);
-        }
-        .embed-container {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
         }
         .chat-link {
             display: block;
@@ -313,21 +243,32 @@
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
+            text-align: center;
         }
         .chat-link:hover {
             text-decoration: underline;
-        }
-        .theme-toggle {
-            background: transparent;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0.2rem;
         }
     </style>
 </head>
 <body>
     <a href="https://megablaster.cc/" class="chat-link">Back to homepage</a>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </body>
 </html>

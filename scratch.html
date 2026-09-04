@@ -30,6 +30,7 @@
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         header {
             background-color: var(--accent-color);
@@ -56,6 +57,13 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px var(--shadow);
             margin-bottom: 2rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .description h2 {
+            text-align: center;
+        }
+        .description p {
+            text-align: center;
         }
         .projects-grid {
             display: grid;
@@ -67,7 +75,7 @@
             border-radius: 8px;
             padding: 1rem;
             box-shadow: 0 2px 5px var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
         }
         .project-card:hover {
             transform: translateY(-5px);
@@ -77,10 +85,12 @@
             margin-top: 0;
             color: var(--accent-color);
             font-size: 1.2rem;
+            text-align: center;
         }
         .project-card p {
             margin-bottom: 1rem;
             color: var(--text-secondary);
+            text-align: center;
         }
         .project-link {
             display: inline-block;
@@ -102,9 +112,14 @@
             background-color: var(--card-bg);
             border-radius: 8px;
             box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .project-page h1 {
             color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
         }
         .embed-container {
             margin: 1rem 0;
@@ -131,6 +146,7 @@
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
+            text-align: center;
         }
         .chat-link:hover {
             text-decoration: underline;
@@ -142,6 +158,10 @@
             font-size: 1.2rem;
             cursor: pointer;
             padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
         }
     </style>
 </head>
@@ -197,6 +217,854 @@
     <footer>
         <p> </p>
     </footer>
+    
+    <a href="https://megablaster.cc/" class="chat-link">Back to homepage</a>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting Problem - Scratch Project</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: white;
+            --text-color: #333;
+            --text-secondary: #666;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-page h1 {
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interesting Problem</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+    <div class="project-page">
+        <p>This project solves a unique problem in a creative way. Interact with it below to see how it works!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1362637251/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="https://scratch.mit.edu/projects/1362637251" class="chat-link">View on Scratch →</a>
+        
+        <a href="https://megablaster.cc/" class="back-link">Back to homepage</a>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const btn = document.querySelector('.theme-toggle');
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon();
+        })();
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter - Scratch Project</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: white;
+            --text-color: #333;
+            --text-secondary: #666;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-page h1 {
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vowel Counter</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+    <div class="project-page">
+        <p>This project counts the vowels in a given text. Type something in and see how many vowels are in your text!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352434149/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="https://scratch.mit.edu/projects/1352434149" class="chat-link">View on Scratch →</a>
+        
+        <a href="https://megablaster.cc/" class="back-link">Back to homepage</a>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const btn = document.querySelector('.theme-toggle');
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon();
+        })();
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Data Analysis - Scratch Project</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: white;
+            --text-color: #333;
+            --text-secondary: #666;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-page h1 {
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Data Analysis</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+    <div class="project-page">
+        <p>This project performs basic data analysis. Interact with it to see how data can be manipulated in Scratch!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352443142/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="https://scratch.mit.edu/projects/1352443142" class="chat-link">View on Scratch →</a>
+        
+        <a href="https://megablaster.cc/" class="back-link">Back to homepage</a>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const btn = document.querySelector('.theme-toggle');
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon();
+        })();
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Number Calculator - Scratch Project</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: white;
+            --text-color: #333;
+            --text-secondary: #666;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-page h1 {
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Two Number Calculator</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+    <div class="project-page">
+        <p>This calculator performs operations on two numbers. Try it out by entering two numbers and selecting an operation!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352418233/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="https://scratch.mit.edu/projects/1352418233" class="chat-link">View on Scratch →</a>
+        
+        <a href="https://megablaster.cc/" class="back-link">Back to homepage</a>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const btn = document.querySelector('.theme-toggle');
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon();
+        })();
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit to Celsius - Scratch Project</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: white;
+            --text-color: #333;
+            --text-secondary: #666;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-page h1 {
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fahrenheit to Celsius</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+    <div class="project-page">
+        <p>This project converts Fahrenheit temperatures to Celsius. Enter a temperature in Fahrenheit and see its equivalent in Celsius!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1352415041/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="https://scratch.mit.edu/projects/1352415041" class="chat-link">View on Scratch →</a>
+        
+        <a href="https://megablaster.cc/" class="back-link">Back to homepage</a>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon();
+        }
+        
+        function updateThemeIcon() {
+            const btn = document.querySelector('.theme-toggle');
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+            updateThemeIcon();
+        })();
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Timer - Scratch Project</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --card-bg: white;
+            --text-color: #333;
+            --text-secondary: #666;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #ff6600;
+            --accent-hover: #e65c00;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-page {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px var(--shadow);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-page h1 {
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .project-page p {
+            text-align: center;
+        }
+        .embed-container {
+            margin: 1rem 0;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .chat-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .chat-link:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.2rem;
+        }
+        iframe {
+            background-color: var(--card-bg);
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rubik's Cube Timer</h1>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    
+    <div class="project-page">
+        <p>This is a Rubik's cube timer. Press space or click on Start to begin!</p>
+        
+        <div class="embed-container">
+            <iframe src="https://scratch.mit.edu/projects/1215876345/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+        
+        <a href="https://scratch.mit.edu/projects/1215876345" class="chat-link">View on Scratch →</a>
+        
+        <a href="https://megablaster.cc/" class="back-link">Back to homepage</a>
+    </div>
     
     <script>
         function toggleTheme() {
@@ -259,100 +1127,7 @@
             padding: 0;
             background-color: var(--bg-color);
             color: var(--text-color);
-        }
-        header {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 2px 5px var(--shadow);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .description {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px var(--shadow);
-            margin-bottom: 2rem;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px var(--shadow);
-        }
-        .project-card h2 {
-            margin-top: 0;
-            color: var(--accent-color);
-            font-size: 1.2rem;
-        }
-        .project-card p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-        .project-link {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 0.5rem;
-        }
-        .project-link:hover {
-            background-color: var(--accent-hover);
-        }
-        .project-page {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 5px var(--shadow);
-        }
-        .project-page h1 {
-            color: var(--accent-color);
-        }
-        .embed-container {
-            margin: 1rem 0;
-            text-align: center;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .chat-link {
             display: block;
@@ -360,21 +1135,32 @@
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
+            text-align: center;
         }
         .chat-link:hover {
             text-decoration: underline;
-        }
-        .theme-toggle {
-            background: transparent;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 0.2rem;
         }
     </style>
 </head>
 <body>
     <a href="https://megablaster.cc/" class="chat-link">Back to homepage</a>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme or default to system preference
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </body>
 </html>
