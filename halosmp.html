@@ -122,7 +122,20 @@
                 <h2>Join now!</h2>
                 <p>IP: halosmp.mcserver.us</p>
                 <p>Version: 1.21.11 - Java</p>
+                <a href="javascript:void(0)" onclick="copyText('halosmp.mcserver.us')">Copy IP</a>
             </div>
+            
+            <script>
+                function copyText(textToCopy) {
+                    navigator.clipboard.writeText(textToCopy)
+                        .then(() => {
+                            alert("Copied IP to clickboard")
+                        })
+                        .catch(err => {
+                    console.error("Failed to copy text: ", err)
+                        });
+                }
+            </script>
             
             <div class="project-card">
                 <h2>Discord Server</h2>
