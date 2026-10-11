@@ -168,13 +168,44 @@
 </head>
 <body>
     <header>
-        <h1>Coming Soon</h1>
+        <h1>Feral SMP</h1>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
     </header>
+    
+    <div class="container">
+        <div class="description">
+            <h2>Feral SMP</h2>
+            <p>Feral SMP resources</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2>Discord Server</h2>
+                <p>The Feral SMP Official Discord Server!</p>
+                <a href="https://discord.gg/H3ph46xwvj" target="_blank" rel="noopener noreferrer" class="project-link">Join Server</a>
+            </div>
+            
+            <div class="project-card">
+                <h2>Join now</h2>
+                <p>IP: 135.148.136.75:50440</p>
+                <p>Version: 1.21.11 - Java:</p>
+                <a href="javascript:void(0)" onclick="copyText('135.148.136.75:50440')" class="project-link">Copy IP</a>
+                <p>Version: Bedrock:</p>
+                <a href="javascript:void(0)" onclick="copyText('135.148.136.75')" class="project-link">Copy IP</a>
+                <a href="javascript:void(0)" onclick="copyText('50440')" class="project-link">Copy port</a>
+            </div>
+        </div>
+    <footer>
+        <p> </p>
+    </footer>
     
     <a href="https://megablaster.cc/" class="chat-link">Back to homepage</a>
     
     <script>
+        function copyText(textToCopy) {
+            navigator.clipboard.writeText(textToCopy)
+        }
+        
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
